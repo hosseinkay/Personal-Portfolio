@@ -89,7 +89,7 @@ export interface Hero {
   name: string;
   role: string;
   location: string;
-  tagline: string;
+  avatarUrl?: string;
   valueProp: string[];
   socials: SocialLink[];
 }
@@ -119,9 +119,9 @@ export const site: SiteMeta = {
 
 export const hero: Hero = {
   name: "Hossein Khoshhal",
-  role: "Public-Sector Data Analytics Consultant",
+  role: "Data Analyst",
   location: "New York, NY",
-  tagline: "Turning messy public-sector systems into clearer decisions, stronger workflows, and usable analytical tools.",
+  avatarUrl: "/avatar.png",
   valueProp: [
     "I'm a data analytics consultant based in New York, focused on public-sector transformation, operational analytics, and decision-support tools.",
     "I work on messy systems where the data, process, and stakeholder reality do not line up yet — from tracing revenue leakage in tolling pipelines, to automating government procurement monitoring, to building resilient health information systems for resource-constrained clinics.",

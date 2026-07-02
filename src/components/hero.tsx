@@ -3,6 +3,7 @@
 import { motion, type Variants } from "framer-motion";
 import { hero } from "@/content";
 import { SocialIcon } from "@/components/social-icon";
+import { withBasePath } from "@/lib/utils";
 
 const EASE_OUT = [0.16, 1, 0.3, 1] as const;
 
@@ -36,6 +37,15 @@ export function Hero() {
         animate="show"
         className="mx-auto flex max-w-content flex-col gap-6"
       >
+        {hero.avatarUrl && (
+          <motion.img
+            variants={item}
+            src={withBasePath(hero.avatarUrl)}
+            alt={hero.name}
+            className="h-24 w-24 rounded-full border border-border object-cover sm:h-28 sm:w-28"
+          />
+        )}
+
         <motion.span variants={item} className="text-sm font-medium uppercase tracking-[0.25em] text-accent">
           {hero.role} · {hero.location}
         </motion.span>
@@ -46,10 +56,6 @@ export function Hero() {
         >
           {hero.name}
         </motion.h1>
-
-        <motion.p variants={item} className="max-w-2xl font-display text-xl italic leading-snug text-accent sm:text-2xl text-balance">
-          {hero.tagline}
-        </motion.p>
 
         <motion.div variants={item} className="flex max-w-2xl flex-col gap-4 text-lg leading-relaxed text-fg-muted sm:text-xl">
           {hero.valueProp.map((paragraph) => (
