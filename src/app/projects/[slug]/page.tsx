@@ -51,6 +51,7 @@ export default function ProjectCaseStudyPage({ params }: { params: { slug: strin
       }
       title={project.title}
       tagline={project.tagline}
+      description={project.description}
       tags={project.techStack}
       gradient={project.gradient}
       caseStudy={project.caseStudy}

@@ -13,8 +13,8 @@ export function ProjectsSection() {
       <div className="mx-auto max-w-content">
         <SectionHeading
           index="01 / Projects"
-          title="Selected work"
-          description="Engagements where the analysis had to hold up — in front of a client, in production, or in a peer-reviewed room."
+          title="Featured work"
+          description="A closer look at a few projects — what the problem was, what I actually did, and what came out of it."
         />
 
         <div className="grid gap-8 md:grid-cols-2">
@@ -28,7 +28,7 @@ export function ProjectsSection() {
         {rest.length > 0 && (
           <div className="mt-16">
             <Reveal>
-              <h3 className="mb-6 font-display text-xl text-fg">More work</h3>
+              <h3 className="mb-6 font-display text-xl text-fg">Additional work</h3>
             </Reveal>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {rest.map((project, i) => (

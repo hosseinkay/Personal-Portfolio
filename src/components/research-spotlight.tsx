@@ -13,12 +13,11 @@ export function ResearchSpotlight({ items }: { items: ResearchItem[] }) {
             Research Spotlight
           </span>
           <h3 className="font-display text-3xl leading-tight text-fg sm:text-4xl text-balance">
-            Most analysts stop at the dashboard. I publish research.
+            Alongside client work, I also publish research.
           </h3>
           <p className="max-w-md text-fg-muted">
-            Alongside client delivery, I do independent and academic research on the systems
-            questions that consulting engagements only get to answer partway — the kind of work
-            that holds up outside a slide deck.
+            Some of the systems questions I run into on client work are worth following further
+            than an engagement allows. This is where that goes.
           </p>
         </div>
 

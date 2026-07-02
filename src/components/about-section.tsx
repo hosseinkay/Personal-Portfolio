@@ -1,4 +1,4 @@
-import { education, skills, certifications, hero } from "@/content";
+import { education, skills, certifications } from "@/content";
 import { SectionHeading } from "@/components/section-heading";
 import { TagPill } from "@/components/tag-pill";
 import { Reveal } from "@/components/reveal";
@@ -12,17 +12,15 @@ export function AboutSection() {
         <div className="grid gap-16 lg:grid-cols-[1.1fr_1fr]">
           <Reveal className="flex flex-col gap-6">
             <p className="text-lg leading-relaxed text-fg-muted">
-              I&apos;m {hero.name}, a {hero.role.toLowerCase()} based in {hero.location}. My work sits
-              at the intersection of public-sector consulting and applied data science — auditing
-              government data pipelines, building the automation that consulting teams actually run
-              on, and designing systems for organizations operating without reliable infrastructure.
+              I&apos;m drawn to work where the technical problem is only half the problem. The harder
+              part is often figuring out what people are trying to decide, what the system is
+              actually doing, and what evidence would make the next step clearer.
             </p>
             <p className="text-lg leading-relaxed text-fg-muted">
-              I hold an M.S. in Data Analytics from Carnegie Mellon University, focused on public
-              policy management, and dual B.A. degrees in Philosophy and International Politics from
-              George Mason University. That combination shows up in how I work: comfortable in SQL
-              and Gurobi, but just as focused on whether the stakeholders in the room actually agree
-              on what the problem is.
+              My background combines public policy, data analytics, consulting, and applied
+              technology. I&apos;m comfortable working in Python, SQL, GIS, optimization models, and
+              cloud-based data environments — but I&apos;m just as interested in the conversations that
+              determine whether the analysis is asking the right question in the first place.
             </p>
 
             <div>

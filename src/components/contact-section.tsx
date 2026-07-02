@@ -11,7 +11,7 @@ export function ContactSection() {
         <SectionHeading
           index="04 / Contact"
           title="Get in touch"
-          description="Open to consulting engagements, research collaborations, and roles where data has to answer a real question."
+          description="Open to public-sector analytics, health technology, responsible AI, and strategy/transformation opportunities."
         />
 
         <div className="grid gap-12 lg:grid-cols-[1fr_1.3fr]">
@@ -22,12 +22,14 @@ export function ContactSection() {
                 {site.email}
               </a>
             </div>
-            <div>
-              <p className="text-sm uppercase tracking-wide text-fg-subtle">Phone</p>
-              <a href={`tel:${site.phone.replace(/[^\d+]/g, "")}`} className="text-lg text-fg hover:text-accent">
-                {site.phone}
-              </a>
-            </div>
+            {site.phone && (
+              <div>
+                <p className="text-sm uppercase tracking-wide text-fg-subtle">Phone</p>
+                <a href={`tel:${site.phone.replace(/[^\d+]/g, "")}`} className="text-lg text-fg hover:text-accent">
+                  {site.phone}
+                </a>
+              </div>
+            )}
             <div>
               <p className="text-sm uppercase tracking-wide text-fg-subtle">LinkedIn</p>
               <a
@@ -38,6 +40,18 @@ export function ContactSection() {
               >
                 <SocialIcon icon="linkedin" />
                 hossein-khoshhal
+              </a>
+            </div>
+            <div>
+              <p className="text-sm uppercase tracking-wide text-fg-subtle">GitHub</p>
+              <a
+                href={hero.socials.find((s) => s.icon === "github")?.href}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-lg text-fg hover:text-accent"
+              >
+                <SocialIcon icon="github" />
+                hosseinkay
               </a>
             </div>
           </Reveal>

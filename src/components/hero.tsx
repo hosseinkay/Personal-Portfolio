@@ -47,9 +47,15 @@ export function Hero() {
           {hero.name}
         </motion.h1>
 
-        <motion.p variants={item} className="max-w-2xl text-lg leading-relaxed text-fg-muted sm:text-xl">
-          {hero.valueProp}
+        <motion.p variants={item} className="max-w-2xl font-display text-xl italic leading-snug text-accent sm:text-2xl text-balance">
+          {hero.tagline}
         </motion.p>
+
+        <motion.div variants={item} className="flex max-w-2xl flex-col gap-4 text-lg leading-relaxed text-fg-muted sm:text-xl">
+          {hero.valueProp.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </motion.div>
 
         <motion.div variants={item} className="flex items-center gap-4 pt-2">
           {hero.socials.map((social) => (

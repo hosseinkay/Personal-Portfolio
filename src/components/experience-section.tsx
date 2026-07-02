@@ -9,7 +9,7 @@ export function ExperienceSection() {
         <SectionHeading
           index="02 / Experience"
           title="Where I've worked"
-          description="Public-sector consulting, applied AI safety research, and systems work for organizations that couldn't afford to get it wrong."
+          description="Public-sector consulting, applied AI safety work, and systems design for governments, clinics, and communities."
         />
 
         <ol className="flex flex-col divide-y divide-border border-t border-border">
@@ -22,14 +22,19 @@ export function ExperienceSection() {
                   {entry.start} – {entry.end} · {entry.location}
                 </p>
               </div>
-              <ul className="flex flex-col gap-3">
-                {entry.bullets.map((bullet, idx) => (
-                  <li key={idx} className="flex gap-3 text-[0.95rem] leading-relaxed text-fg-muted">
-                    <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
+              <div className="flex flex-col gap-4">
+                {entry.summary && (
+                  <p className="text-[0.95rem] leading-relaxed text-fg-muted">{entry.summary}</p>
+                )}
+                <ul className="flex flex-col gap-3">
+                  {entry.bullets.map((bullet, idx) => (
+                    <li key={idx} className="flex gap-3 text-[0.95rem] leading-relaxed text-fg-muted">
+                      <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </Reveal>
           ))}
         </ol>

@@ -47,6 +47,7 @@ export default function ResearchCaseStudyPage({ params }: { params: { slug: stri
       }
       title={item.title}
       tagline={item.framing}
+      description={item.description}
       tags={item.tags}
       gradient={item.gradient}
       caseStudy={item.caseStudy}
