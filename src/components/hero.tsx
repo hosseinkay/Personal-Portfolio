@@ -36,9 +36,22 @@ export function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="mx-auto grid max-w-content items-center gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16"
+        className="mx-auto flex max-w-content flex-col gap-10 lg:flex-row lg:items-start lg:gap-14"
       >
-        <div className="order-2 flex flex-col gap-6 lg:order-1">
+        {hero.avatarUrl && (
+          <motion.div variants={item} className="shrink-0">
+            <Image
+              src={withBasePath(hero.avatarUrl)}
+              alt={hero.name}
+              width={288}
+              height={288}
+              priority
+              className="h-40 w-40 rounded-2xl border border-border object-cover sm:h-48 sm:w-48 lg:h-56 lg:w-56"
+            />
+          </motion.div>
+        )}
+
+        <div className="flex flex-col gap-6">
           <motion.span variants={item} className="text-sm font-medium uppercase tracking-[0.25em] text-accent">
             {hero.role} · {hero.location}
           </motion.span>
@@ -56,7 +69,7 @@ export function Hero() {
             ))}
           </motion.div>
 
-          <motion.div variants={item} className="flex items-center gap-4 pt-2">
+          <motion.div variants={item} className="flex items-center gap-3 pt-2">
             {hero.socials.map((social) => (
               <a
                 key={social.label}
@@ -64,26 +77,13 @@ export function Hero() {
                 target={social.icon === "email" ? undefined : "_blank"}
                 rel={social.icon === "email" ? undefined : "noreferrer"}
                 aria-label={social.label}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-fg-muted transition-colors hover:border-accent hover:text-accent"
+                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border text-fg-muted transition-colors hover:border-accent hover:text-accent"
               >
                 <SocialIcon icon={social.icon} />
               </a>
             ))}
           </motion.div>
         </div>
-
-        {hero.avatarUrl && (
-          <motion.div variants={item} className="order-1 flex justify-center lg:order-2 lg:justify-end">
-            <Image
-              src={withBasePath(hero.avatarUrl)}
-              alt={hero.name}
-              width={320}
-              height={320}
-              priority
-              className="h-48 w-48 rounded-full border border-border object-cover sm:h-64 sm:w-64 lg:h-80 lg:w-80"
-            />
-          </motion.div>
-        )}
       </motion.div>
     </section>
   );

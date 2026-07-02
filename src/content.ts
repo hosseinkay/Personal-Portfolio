@@ -123,8 +123,7 @@ export const hero: Hero = {
   location: "New York, NY",
   avatarUrl: "/avatar.png",
   valueProp: [
-    "I'm a data analytics consultant based in New York, focused on public-sector transformation, operational analytics, and decision-support tools.",
-    "I work on messy systems where the data, process, and stakeholder reality do not line up yet — from tracing revenue leakage in tolling pipelines, to automating government procurement monitoring, to building resilient health information systems for resource-constrained clinics.",
+    "My work focuses on bringing data and AI into public-sector environments where the problems are complex and the solutions need to be understandable. I help teams demystify what technology can do, translate it into practical workflows, and apply it in ways that improve how public systems operate.",
   ],
   socials: [
     { label: "GitHub", href: "https://github.com/hosseinkay", icon: "github" },
