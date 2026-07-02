@@ -104,7 +104,7 @@ export const site: SiteMeta = {
   title: "Hossein Khoshhal — Data Analytics Consultant",
   description:
     "Portfolio of Hossein Khoshhal, a data analytics consultant working across public-sector modernization, tolling revenue integrity, health systems, and geospatial optimization research.",
-  url: "https://hosseinkhoshhal.github.io/portfolio",
+  url: "https://hosseinkay.github.io/Personal-Portfolio",
   email: "hosseinkhoshhal7@gmail.com",
   phone: "+1 (571) 338-9858",
   resumeUrl: "/resume.pdf",
@@ -117,7 +117,7 @@ export const hero: Hero = {
   valueProp:
     "I trace complex systems back to the decisions that broke them — recovering millions in revenue leakage, automating hours out of manual workflows, and modeling equitable access to public services.",
   socials: [
-    { label: "GitHub", href: "https://github.com/hosseinkhoshhal", icon: "github" },
+    { label: "GitHub", href: "https://github.com/hosseinkay", icon: "github" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/hossein-khoshhal", icon: "linkedin" },
     { label: "Email", href: "mailto:hosseinkhoshhal7@gmail.com", icon: "email" },
   ],
