@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import { hero } from "@/content";
 import { SocialIcon } from "@/components/social-icon";
+import { withBasePath } from "@/lib/utils";
 
 const EASE_OUT = [0.16, 1, 0.3, 1] as const;
 
@@ -74,7 +75,7 @@ export function Hero() {
         {hero.avatarUrl && (
           <motion.div variants={item} className="order-1 flex justify-center lg:order-2 lg:justify-end">
             <Image
-              src={hero.avatarUrl}
+              src={withBasePath(hero.avatarUrl)}
               alt={hero.name}
               width={320}
               height={320}
