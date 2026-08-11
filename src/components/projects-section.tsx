@@ -14,7 +14,7 @@ export function ProjectsSection() {
         <SectionHeading
           index="01 / Projects"
           title="Featured work"
-          description="A closer look at a few projects — what the problem was, what I actually did, and what came out of it."
+          description="What the problem was, what I did, and what came out of it."
         />
 
         <div className="grid gap-8 md:grid-cols-2">

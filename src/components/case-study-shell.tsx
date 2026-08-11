@@ -30,12 +30,10 @@ export function CaseStudyShell({
   links?: { label: string; href: string }[];
   statsSlot?: ReactNode;
 }) {
-  const sections: { label: string; text: string }[] = [
-    { label: "Context", text: caseStudy.context },
-    { label: "My role", text: caseStudy.myRole },
-    { label: "Approach", text: caseStudy.approach },
-    { label: "Outcome", text: caseStudy.outcome },
-    { label: "What this demonstrates", text: caseStudy.whatThisDemonstrates },
+  const sections: { label: string; content: string | string[] }[] = [
+    { label: "Context", content: caseStudy.context },
+    { label: "What I did", content: caseStudy.whatIDid },
+    { label: "Result", content: caseStudy.result },
   ];
 
   return (
@@ -83,7 +81,18 @@ export function CaseStudyShell({
           {sections.map((section, i) => (
             <Reveal key={section.label} delay={0.05 + i * 0.05}>
               <h2 className="mb-3 font-display text-xl text-fg">{section.label}</h2>
-              <p className="leading-relaxed text-fg-muted">{section.text}</p>
+              {Array.isArray(section.content) ? (
+                <ul className="flex flex-col gap-2">
+                  {section.content.map((item, idx) => (
+                    <li key={idx} className="flex gap-3 leading-relaxed text-fg-muted">
+                      <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="leading-relaxed text-fg-muted">{section.content}</p>
+              )}
             </Reveal>
           ))}
         </div>

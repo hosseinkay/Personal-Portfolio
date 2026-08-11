@@ -9,7 +9,7 @@ export function ExperienceSection() {
         <SectionHeading
           index="02 / Experience"
           title="Where I've worked"
-          description="Public-sector consulting, applied AI safety work, and systems design for governments, clinics, and communities."
+          description="Consulting roles in public-sector and health technology, plus a research role in AI safety."
         />
 
         <ol className="flex flex-col divide-y divide-border border-t border-border">

@@ -10,14 +10,14 @@ export function ResearchSpotlight({ items }: { items: ResearchItem[] }) {
       <div className="grid gap-0 lg:grid-cols-[1.1fr_1fr]">
         <div className="flex flex-col justify-center gap-4 p-8 sm:p-10 lg:p-12">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            Research Spotlight
+            Research
           </span>
           <h3 className="font-display text-3xl leading-tight text-fg sm:text-4xl text-balance">
-            Alongside client work, I also publish research.
+            Independent and academic research
           </h3>
           <p className="max-w-md text-fg-muted">
-            Some of the systems questions I run into on client work are worth following further
-            than an engagement allows. This is where that goes.
+            I&apos;ve also worked on independent and academic research in health technology and
+            urban service access.
           </p>
         </div>
 
